@@ -1,0 +1,27 @@
+LTspice 24.1.9 for Windows
+Circuit: C:\Users\vinhp\OneDrive\Desktop\Electric\NMOS\NMOS\NMOS_lay_sim.spi
+Start Time: Fri May 30 21:58:51 2025
+Options: NOMOD DEFL=3E-6 DEFW=3E-6 DEFAD=70E-12 DEFAS=70E-12 LIMPTS=1000 ITL5=0 RELTOL=0.01 ABSTOL=5E-10 VNTOL=5E-7
+solver = Normal
+Maximum thread count: 12
+tnom = 27
+temp = 27
+method = trap
+abstol = 5e-10
+reltol = 0.01
+volttol = 5e-07
+Instance "Mnmos1": Length shorter than recommended for a level 1 MOSFET.
+Instance "Mnmos1": Width narrower than recommended for a level 1 MOSFET.
+.OP point found by inspection.
+.step Vg=0 
+.step Vg=1 
+.step Vg=2 
+.step Vg=3 
+.step Vg=4 
+.step Vg=5 
+Total elapsed time: 0.494 seconds.
+
+Files loaded:
+C:\Users\vinhp\OneDrive\Desktop\Electric\NMOS\NMOS\NMOS_lay_sim.spi
+C:\Users\vinhp\OneDrive\Desktop\Electric\c5_models.txt
+

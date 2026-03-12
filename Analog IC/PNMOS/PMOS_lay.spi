@@ -1,0 +1,22 @@
+*** SPICE deck for cell PMOS_lay{lay} from library PMOS
+*** Created on Thu May 29, 2025 22:24:57
+*** Last revised on Thu May 29, 2025 22:46:18
+*** Written on Thu May 29, 2025 22:46:46 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+*CMOS/BULK-NWELL (PRELIMINARY PARAMETERS)
+.OPTIONS NOMOD DEFL=3UM DEFW=3UM DEFAD=70P DEFAS=70P LIMPTS=1000
++ITL5=0 RELTOL=0.01 ABSTOL=500PA VNTOL=500UV LVLTIM=2
++LVLCOD=1
+.MODEL N NMOS LEVEL=1
++KP=60E-6 VTO=0.7 GAMMA=0.3 LAMBDA=0.05 PHI=0.6
++LD=0.4E-6 TOX=40E-9 CGSO=2.0E-10 CGDO=2.0E-10 CJ=.2MF/M^2
+.MODEL P PMOS LEVEL=1
++KP=20E-6 VTO=0.7 GAMMA=0.4 LAMBDA=0.05 PHI=0.6
++LD=0.6E-6 TOX=40E-9 CGSO=3.0E-10 CGDO=3.0E-10 CJ=.2MF/M^2
+.MODEL DIFFCAP D CJO=.2MF/M^2
+*** WARNING: no power connection for P-transistor wells in cell 'PMOS_lay{lay}'
+
+*** TOP LEVEL CELL: PMOS_lay{lay}
+Mpmos@0 d g s pmos@0_p-trans-well MOSP L=0.36U W=2.16U AS=3.694P AD=3.305P PS=7.74U PD=7.38U
+.END

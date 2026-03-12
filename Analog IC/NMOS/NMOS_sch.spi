@@ -1,0 +1,29 @@
+*** SPICE deck for cell NMOS_sch{sch} from library NMOS
+*** Created on Thu May 29, 2025 16:08:58
+*** Last revised on Thu May 29, 2025 16:52:05
+*** Written on Thu May 29, 2025 16:53:18 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+*CMOS/BULK-NWELL (PRELIMINARY PARAMETERS)
+.OPTIONS NOMOD DEFL=3UM DEFW=3UM DEFAD=70P DEFAS=70P LIMPTS=1000
++ITL5=0 RELTOL=0.01 ABSTOL=500PA VNTOL=500UV LVLTIM=2
++LVLCOD=1
+.MODEL N NMOS LEVEL=1
++KP=60E-6 VTO=0.7 GAMMA=0.3 LAMBDA=0.05 PHI=0.6
++LD=0.4E-6 TOX=40E-9 CGSO=2.0E-10 CGDO=2.0E-10 CJ=.2MF/M^2
+.MODEL P PMOS LEVEL=1
++KP=20E-6 VTO=0.7 GAMMA=0.4 LAMBDA=0.05 PHI=0.6
++LD=0.6E-6 TOX=40E-9 CGSO=3.0E-10 CGDO=3.0E-10 CJ=.2MF/M^2
+.MODEL DIFFCAP D CJO=.2MF/M^2
+
+*** TOP LEVEL CELL: NMOS_sch{sch}
+Mnmos-4@1 d g s b N L=0.36U W=0.36U
+
+* Spice Code nodes in cell cell 'NMOS_sch{sch}'
+Vd d gnd 0
+Vg g gnd 0
+Vs s gnd 0
+Vb b gnd 0
+.dc Vd 0 5 1m Vg 0 5 1
+.include D:\Downloads\Dowloads electric VLSI\Electric\Library\c5_models.txt
+.END

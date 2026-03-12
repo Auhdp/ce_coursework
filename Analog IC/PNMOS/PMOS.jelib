@@ -1,0 +1,54 @@
+# header information:
+HPMOS|9.07
+
+# Views:
+Vlayout|lay
+Vschematic|sch
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D180.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I4
+
+# Cell PMOS_lay;1{lay}
+CPMOS_lay;1{lay}||mocmos|1748532297156|1748535183249||DRC_last_good_drc_area_date()G1748533450469|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1748533450469
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-P-Active-Con|contact@0||-14|-6|7|||
+NMetal-1-P-Active-Con|contact@1||-14|9|7|||
+NMetal-1-Polysilicon-1-Con|contact@2||-28|1||||
+NMetal-1-Pin|pin@0||-37|1||||
+NMetal-1-Pin|pin@1||1|23||||
+NMetal-1-Pin|pin@2||1|9||||
+NMetal-1-Pin|pin@3||1|-6||||
+Ngeneric:Invisible-Pin|pin@4||-44|19|||||SIM_spice_card(D5G2;)S[Vd d gnd 5,Vg g gnd 0,Vs s gnd 0,Vdd b gnd 5,.dc Vs 0 -5 -1m Vg 0 5 -1 ,".include D:\\Downloads\\Dowloads electric VLSI\\Electric\\Library\\PMOS\\C5_models.txt"]
+NP-Transistor|pmos@0||-14|1|9||||SIM_spice_model(D5G1;)SMOSP
+NMetal-1-N-Well-Con|well@0||-14|23|7|||
+AP-Active|net@0||9|IJS2700|pmos@0|diff-top|-14|4.75|contact@1||-14|9
+AP-Active|net@1||9|IJS900|pmos@0|diff-bottom|-14|-2.75|contact@0||-14|-6
+APolysilicon-1|net@2|||S0|pmos@0|poly-left|-22|1|contact@2||-28|1
+AMetal-1|net@3||1|S0|contact@2||-28|1|pin@0||-37|1
+AMetal-1|net@4||1|S1800|well@0||-14|23|pin@1||1|23
+AMetal-1|net@5||1|S1800|contact@1||-14|9|pin@2||1|9
+AMetal-1|net@6||1|S1800|contact@0||-14|-6|pin@3||1|-6
+Eb||D5G2;|pin@1||U
+Ed||D5G2;|pin@3||U
+Eg||D5G2;|pin@0||U
+Es||D5G2;|pin@2||U
+X
+
+# Cell PMOS_sch;1{sch}
+CPMOS_sch;1{sch}||schematic|1748526432312|1748529888641|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NWire_Pin|pin@0||-3|5||||
+NWire_Pin|pin@1||-9|0||||
+NWire_Pin|pin@2||-3|-5||||
+NWire_Pin|pin@3||0|1||||
+Ngeneric:Invisible-Pin|pin@4||-20|11|||||SIM_spice_card(D5G1;)S[Vs s gnd 0,Vg g gnd 0,Vb b gnd 5,Vd d gnd 0,.dc Vs 0 -5 -1m Vg 0 -5 -1 ,".include D:\\Downloads\\Dowloads electric VLSI\\Electric\\Library\\C5_models.txt"]
+N4-Port-Transistor|pmos-4@3||-5|0|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2|SIM_spice_model(D5G1;Y-3;)SMOSP
+Awire|net@0|||2700|pmos-4@3|s|-3|2|pin@0||-3|5
+Awire|net@1|||0|pmos-4@3|g|-6|0|pin@1||-9|0
+Awire|net@2|||900|pmos-4@3|d|-3|-2|pin@2||-3|-5
+Awire|net@3|||1800|pmos-4@3|b|-3|1|pin@3||0|1
+Eb||D5G2;|pin@3||U
+Ed||D5G2;|pin@2||U
+Eg||D5G2;|pin@1||U
+Es||D5G2;|pin@0||U
+X

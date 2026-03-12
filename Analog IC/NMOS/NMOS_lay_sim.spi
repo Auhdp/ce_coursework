@@ -1,0 +1,31 @@
+*** SPICE deck for cell NMOS_lay{lay} from library NMOS
+*** Created on Thu May 29, 2025 16:59:21
+*** Last revised on Thu May 29, 2025 18:33:10
+*** Written on Thu May 29, 2025 18:34:26 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+* CMOS/BULK-NWELL (PRELIMINARY PARAMETERS)
+.OPTIONS NOMOD DEFL=3E-6 DEFW=3E-6 DEFAD=70E-12 DEFAS=70E-12 LIMPTS=1000 ITL5=0 RELTOL=0.01 ABSTOL=5E-10 VNTOL=5E-7
+
+.MODEL N NMOS LEVEL=1 KP=60E-6 VTO=0.7 GAMMA=0.3 LAMBDA=0.05 PHI=0.6
+
+.MODEL P PMOS LEVEL=1 KP=20E-6 VTO=0.7 GAMMA=0.4 LAMBDA=0.05 PHI=0.6
+
+* Removed DIFFCAP model since LTspice expects standard device models.
+
+* Device instance - connect bulk to source for bulk NMOS
+Mnmos1 d g s s N L=0.6u W=1.8u
+
+* Voltage sources for node definition (can be replaced or removed if in circuit)
+Vd d 0 DC 0
+Vg g 0 DC 0
+Vs s 0 DC 0
+Vb b 0 DC 0
+
+* DC sweep
+.dc Vd 0 5 0.001 Vg 0 5 1
+
+* Include external model file - path must be valid and use forward slashes
+.include "C:\Users\vinhp\OneDrive\Desktop\Electric\c5_models.txt"
+
+.END

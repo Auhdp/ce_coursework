@@ -1,0 +1,23 @@
+*** SPICE deck for cell PMOS_sch{sch} from library PMOS
+*** Created on Thu May 29, 2025 20:47:12
+*** Last revised on Thu May 29, 2025 21:44:48
+*** Written on Thu May 29, 2025 21:45:19 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+* CMOS/BULK-NWELL (PRELIMINARY PARAMETERS)
+*** WARNING: no power connection for P-transistor wells in cell 'PMOS_sch{sch}'
+.MODEL MOSP PMOS LEVEL=1
++VTO=-0.7 KP=20E-6 GAMMA=0.4 LAMBDA=0.05 PHI=0.6
++TOX=40E-9 CGSO=3.0E-10 CGDO=3.0E-10
+
+*** TOP LEVEL CELL: PMOS_sch{sch}
+Mpmos-M@0 d g s b MOSP L=0.6U W=3.6U
+
+* Spice Code nodes in cell cell 'PMOS_12_2{sch}'
+Vs s gnd 0
+Vb b gnd 5
+Vd d gnd 0
+Vg g gnd 5
+.dc Vs -5 -1n Vg 0 -5 -1
+.include "D:\Downloads\Dowloads electric VLSI\Electric\Library\PMOS\c5_models.txt"
+.END
